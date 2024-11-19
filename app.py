@@ -1,10 +1,14 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "Katman Just Hayal Projesine Hoş Geldiniz!"
+    return "Just Hayal Projesine Hoş Geldiniz!"
+
+@app.route('/saka-uret')
+def saka_uret():
+    return "Burada şaka üretilecek."
 
 if __name__ == '__main__':
     app.run(debug=True)
